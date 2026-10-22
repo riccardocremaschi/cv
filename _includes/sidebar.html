@@ -12,7 +12,7 @@
   {% if sidebar.skills %}
   <div class="skills-sidebar-container container-block">
     <h2 class="container-block-title">{{ sidebar.skills.title }}</h2>
-    <ul class="list-unstyled skills-sidebar-list">
+    <ul class="skills-sidebar-list">
       {% for skill in sidebar.skills.contributions %}
       <li>{{ skill.title }}</li>
       {% endfor %}

@@ -77,10 +77,15 @@ p {
 
   .avatar {
     //used for profile image
-    max-width: 100px;
-    margin-bottom: 15px;
+    display: block;
+    width: 138px;
+    height: 138px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto 15px;
     border: 0px solid #fff;
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
   .contact-list {
@@ -135,7 +140,7 @@ p {
   .contact-list li { margin-bottom: 6px; line-height: 1.35; }
   .container-block-title { margin-bottom: 8px; }
   .education-container, .skills-sidebar-container, .languages-container, .interests-container { padding-top: 18px; padding-bottom: 18px; }
-  .skills-sidebar-list { margin-bottom: 0; li { margin-bottom: 6px; line-height: 1.35; &:last-child { margin-bottom: 0; } } }
+  .skills-sidebar-list { margin: 0; padding-left: 18px; list-style-type: disc; li { display: list-item; margin-bottom: 6px; line-height: 1.35; &:last-child { margin-bottom: 0; } } }
   .languages-container .interests-list li { margin-bottom: 3px; line-height: 1.3; &:last-child { margin-bottom: 0; } }
   .languages-container {
     .lang-desc {

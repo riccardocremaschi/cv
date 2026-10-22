@@ -2,7 +2,7 @@
 <div class="sidebar-wrapper">
   <div class="profile-container">
     {% if sidebar.avatar %}
-    <img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Fotografia di profilo" />
+    <div class="avatar-frame"><img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Fotografia di profilo" /></div>
     {% endif %}
     <h1 class="name">{{ sidebar.name }}</h1>
     <h3 class="tagline">{{ sidebar.tagline }}</h3>

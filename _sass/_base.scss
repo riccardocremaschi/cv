@@ -244,6 +244,8 @@ p {
     color: darken($theme-color, 15%);
   }
   .projects-section {
+    .technical-skills-list { padding-left: 19px; margin: 0; list-style-type: disc; }
+    .technical-skills-list .item { display: list-item; padding-left: 0; }
     .intro { margin-bottom: 12px; }
     .item { margin-bottom: 1px; line-height: 1.15; }
     .item:last-child { margin-bottom: 0; }

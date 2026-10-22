@@ -16,8 +16,9 @@
   </div><!--//intro-->
   {% endif %}
 
+  <ul class="technical-skills-list">
   {% for project in projects.assignments %}
-    <div class="item">
+    <li class="item">
 
       <span class="project-title">
         {% if project.link %}
@@ -31,8 +32,9 @@
       - <span class="project-tagline">{{ project.tagline }}</span>
       {% endif %}
 
-    </div><!--//item-->
+    </li><!--//item-->
   {% endfor %}
+  </ul>
 
 </section><!--//section-->
 {% endif %}

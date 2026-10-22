@@ -5,7 +5,8 @@
     <div class="avatar-frame"><img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Fotografia di profilo" /></div>
     {% endif %}
     <h1 class="name">{{ sidebar.name }}</h1>
-    <h3 class="tagline">{{ sidebar.tagline }}</h3>
+    {% assign tagline_parts = sidebar.tagline | split: " - " %}
+    <h3 class="tagline">{% for part in tagline_parts %}<span class="tagline-part">{{ part }}</span>{% endfor %}</h3>
   </div>
   {% include contact.html %}
   {% if sidebar.education %}{% include education.html %}{% endif %}

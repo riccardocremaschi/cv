@@ -195,6 +195,18 @@ p {
     margin-bottom: 60px;
   }
 
+  .experiences-section {
+    .experience-company-group { margin-bottom: 30px; }
+    .experience-company-name {
+      color: $text-color;
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .experience-position { margin-bottom: 16px; }
+    .experience-position:last-child { margin-bottom: 0; }
+  }
+
   .experiences-section,
   .recommendations-section,
   .educations-section {

@@ -9,29 +9,29 @@
     {{ experiences.title }}
   </h2>
 
+  {% assign previous_company = "" %}
   {% for experience in experiences.info %}
-  <div class="item">
-
-    <div class="meta">
-
-      <div class="upper-row">
-        <h3 class="job-title">{{ experience.role }}</h3>
-        <div class="time">{{ experience.time }}</div>
-      </div><!--//upper-row-->
-
-      <div class="company">{{ experience.company }}</div>
-
-    </div><!--//meta-->
-
-    {% if experience.details %}
-    <div class="details">
-      {{ experience.details | markdownify }}
-    </div><!--//details-->
+    {% if experience.company != previous_company %}
+      {% unless forloop.first %}</div>{% endunless %}
+      <div class="experience-company-group">
+        <h3 class="experience-company-name">{{ experience.company }}</h3>
     {% endif %}
 
-  </div><!--//item-->
+    <div class="item experience-position">
+      <div class="meta">
+        <div class="upper-row">
+          <h4 class="job-title">{{ experience.role }}</h4>
+          <div class="time">{{ experience.time }}</div>
+        </div>
+      </div>
+      {% if experience.details %}
+      <div class="details">
+        {{ experience.details | markdownify }}
+      </div>
+      {% endif %}
+    </div>
+    {% assign previous_company = experience.company %}
+    {% if forloop.last %}</div>{% endif %}
   {% endfor %}
-
-</section><!--//section-->
+</section>
 {% endif %}
-

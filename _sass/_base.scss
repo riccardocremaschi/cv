@@ -196,21 +196,7 @@ p {
   }
 
   .experiences-section {
-    .experience-company-group {
-      position: relative;
-      padding-left: 16px;
-      margin-bottom: 30px;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 76px;
-        border-radius: 3px;
-        background: $theme-color;
-      }
-    }
+    .experience-company-group { margin-bottom: 30px; }
     .experience-company-name {
       color: $theme-color;
       font-size: 20px;
